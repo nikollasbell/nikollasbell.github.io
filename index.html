@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condessa - Banda Oficial</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Partículas de Notas Musicais -->
+    <div class="music-notes"></div>
+
+    <!-- Menu de Navegação -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Condessa</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#integrantes">Integrantes</a></li>
+                <li><a href="#agenda">Agenda</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li class="admin-login"><a href="#" id="admin-login-btn"><i class="fas fa-lock"></i></a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção Home/Título -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="band-name">CONDESSA</h1>
+            <p class="tagline">Música que transforma</p>
+            <div class="hero-buttons">
+                <a href="#agenda" class="btn btn-primary">Próximos Shows</a>
+                <a href="#contato" class="btn btn-secondary">Contrate-nos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="section">
+        <div class="container">
+            <h2 class="section-title">Sobre a Banda</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1501612780327-45045538702b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Banda Condessa">
+                </div>
+                <div class="about-text">
+                    <p>A Condessa surgiu da união de talentos musicais excepcionais, determinados a criar uma experiência sonora única que mistura energia e sofisticação. Nossa jornada começou em pequenos palcos e hoje conquistamos grandes plateias com nossa música autêntica e performances inesquecíveis.</p>
+                    <p>Com influências diversas que vão do rock clássico ao pop contemporâneo, criamos um som que é ao mesmo tempo familiar e inovador. Nossa missão é conectar pessoas através da música, criando momentos que ficam gravados na memória.</p>
+                    <p>Cada show da Condessa é uma experiência completa, onde a música, a energia e a conexão com o público se transformam em algo mágico e único.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Integrantes -->
+    <section id="integrantes" class="section">
+        <div class="container">
+            <h2 class="section-title">Integrantes</h2>
+            <div class="members-container">
+                <!-- Os cartões dos integrantes serão inseridos aqui via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Agenda -->
+    <section id="agenda" class="section">
+        <div class="container">
+            <h2 class="section-title">Agenda de Shows</h2>
+            <div class="events-container">
+                <!-- Os cartões de eventos serão inseridos aqui via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Galeria -->
+    <section id="galeria" class="section">
+        <div class="container">
+            <h2 class="section-title">Galeria</h2>
+            <div class="gallery-container">
+                <!-- As imagens da galeria serão inseridas aqui via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="section">
+        <div class="container">
+            <h2 class="section-title">Contato</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Fale Conosco</h3>
+                    <p><i class="fas fa-envelope"></i> contato@bandacondessa.com</p>
+                    <p><i class="fas fa-phone"></i> (11) 99999-9999</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-spotify"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Seu email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Assunto" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Sua mensagem" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Login Admin -->
+    <div id="adminLoginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login Administrativo</h2>
+            <form id="adminLoginForm">
+                <div class="form-group">
+                    <input type="text" id="adminUsername" placeholder="Usuário" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="adminPassword" placeholder="Senha" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de Detalhes do Evento -->
+    <div id="eventDetailsModal" class="modal">
+        <div class="modal-content event-details">
+            <span class="close">&times;</span>
+            <div id="eventDetailsContent">
+                <!-- Conteúdo do evento será inserido aqui via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Admin -->
+    <div id="adminPanel" class="modal">
+        <div class="modal-content admin-panel">
+            <span class="close">&times;</span>
+            <h2>Painel Administrativo</h2>
+            <div class="admin-tabs">
+                <button class="tab-btn active" data-tab="heroTab">Título/Logo</button>
+                <button class="tab-btn" data-tab="membersTab">Integrantes</button>
+                <button class="tab-btn" data-tab="eventsTab">Agenda</button>
+                <button class="tab-btn" data-tab="galleryTab">Galeria</button>
+            </div>
+            <div class="tab-content">
+                <!-- Tab Título/Logo -->
+                <div id="heroTab" class="tab-pane active">
+                    <h3>Editar Título/Logo</h3>
+                    <form id="heroForm">
+                        <div class="form-group">
+                            <label for="heroBackground">URL da Imagem de Fundo:</label>
+                            <input type="text" id="heroBackground" name="heroBackground" placeholder="https://exemplo.com/imagem.jpg">
+                        </div>
+                        <div class="form-group">
+                            <label for="bandLogo">URL da Logo (opcional):</label>
+                            <input type="text" id="bandLogo" name="bandLogo" placeholder="https://exemplo.com/logo.png">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                    </form>
+                </div>
+                
+                <!-- Tab Integrantes -->
+                <div id="membersTab" class="tab-pane">
+                    <h3>Gerenciar Integrantes</h3>
+                    <button id="addMemberBtn" class="btn btn-secondary">Adicionar Integrante</button>
+                    <div id="membersList" class="admin-list">
+                        <!-- Lista de integrantes será inserida aqui via JavaScript -->
+                    </div>
+                    <div id="memberForm" class="hidden">
+                        <h4>Adicionar/Editar Integrante</h4>
+                        <form id="memberEditForm">
+                            <input type="hidden" id="memberId">
+                            <div class="form-group">
+                                <label for="memberName">Nome:</label>
+                                <input type="text" id="memberName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="memberRole">Função:</label>
+                                <input type="text" id="memberRole" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="memberPhoto">URL da Foto:</label>
+                                <input type="text" id="memberPhoto" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="memberBio">Biografia:</label>
+                                <textarea id="memberBio" rows="3"></textarea>
+                            </div>
+                            <div class="form-buttons">
+                                <button type="submit" class="btn btn-primary">Salvar</button>
+                                <button type="button" id="cancelMemberBtn" class="btn btn-secondary">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Tab Agenda -->
+                <div id="eventsTab" class="tab-pane">
+                    <h3>Gerenciar Agenda</h3>
+                    <button id="addEventBtn" class="btn btn-secondary">Adicionar Evento</button>
+                    <div id="eventsList" class="admin-list">
+                        <!-- Lista de eventos será inserida aqui via JavaScript -->
+                    </div>
+                    <div id="eventForm" class="hidden">
+                        <h4>Adicionar/Editar Evento</h4>
+                        <form id="eventEditForm">
+                            <input type="hidden" id="eventId">
+                            <div class="form-group">
+                                <label for="eventTitle">Título:</label>
+                                <input type="text" id="eventTitle" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="eventDate">Data:</label>
+                                <input type="date" id="eventDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="eventTime">Hora:</label>
+                                <input type="time" id="eventTime" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="eventLocation">Local:</label>
+                                <input type="text" id="eventLocation" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="eventImage">URL da Imagem:</label>
+                                <input type="text" id="eventImage" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="eventDescription">Descrição:</label>
+                                <textarea id="eventDescription" rows="3"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="eventTicketLink">Link para Ingressos:</label>
+                                <input type="text" id="eventTicketLink">
+                            </div>
+                            <div class="form-buttons">
+                                <button type="submit" class="btn btn-primary">Salvar</button>
+                                <button type="button" id="cancelEventBtn" class="btn btn-secondary">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Tab Galeria -->
+                <div id="galleryTab" class="tab-pane">
+                    <h3>Gerenciar Galeria</h3>
+                    <button id="addImageBtn" class="btn btn-secondary">Adicionar Imagem</button>
+                    <div id="galleryList" class="admin-list gallery-admin-list">
+                        <!-- Lista de imagens será inserida aqui via JavaScript -->
+                    </div>
+                    <div id="imageForm" class="hidden">
+                        <h4>Adicionar Imagem</h4>
+                        <form id="imageEditForm">
+                            <input type="hidden" id="imageId">
+                            <div class="form-group">
+                                <label for="imageUrl">URL da Imagem:</label>
+                                <input type="text" id="imageUrl" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="imageCaption">Legenda (opcional):</label>
+                                <input type="text" id="imageCaption">
+                            </div>
+                            <div class="form-buttons">
+                                <button type="submit" class="btn btn-primary">Salvar</button>
+                                <button type="button" id="cancelImageBtn" class="btn btn-secondary">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Condessa</div>
+                <div class="footer-social">
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-spotify"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Banda Condessa. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
